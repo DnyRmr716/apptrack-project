@@ -18,4 +18,4 @@ AppTrack is a personal job application management tool designed to help job seek
 - **Python**: Backend logic and server-side processing.
 - **Django**: Web framework for the backend, including models, views, and templates.
 - **HTML/CSS**: Frontend structure and styling.
-- **PostgreSQl**: Database used for storing application data.
+- **SQlite**: Database used for storing application data.
