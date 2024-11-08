@@ -92,7 +92,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': '<dbnamehere>',
+            'NAME': 'tracker',
             # The value of 'NAME' should match the value of 'NAME' you replaced.
         }
     }
