@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}AppTrack{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main_app/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            {% if request.path != '/applications/' %}
+                <a href="{% url 'application_list' %}">Home</a>
+            {% endif %}
+            {% if request.path != '/applications/new/' %}
+                <a href="{% url 'application_create' %}">Create</a>
+            {% endif %}
+            {% if request.path != '/applications/about/' %}
+                <a href="{% url 'about' %}">About</a>
+            {% endif %}
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}">Log Out</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{% extends "main_app/base.html" %}
+
+{% block title %}Application Form{% endblock %}
+
+{% block content %}
+    <div class="box form-container">
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                {{ form.application_title.label_tag }}<br>
+                {{ form.application_title }}
+            </div>
+            
+            <div class="form-group">
+                {{ form.job_title.label_tag }}<br>
+                {{ form.job_title }}
+            </div>
+            
+            <div class="form-group">
+                {{ form.company.label_tag }}<br>
+                {{ form.company }}
+            </div>
+
+            <div class="form-group">
+                {{ form.job_summary.label_tag }}<br>
+                {{ form.job_summary }}
+            </div>
+
+            <div class="form-group">
+                {{ form.date_applied.label_tag }}<br>
+                {{ form.date_applied }}
+            </div>
+
+            <div class="form-group">
+                {{ form.status.label_tag }}<br>
+                {{ form.status }}
+            </div>
+
+            <div class="form-group">
+                {{ form.notes.label_tag }}<br>
+                {{ form.notes }}
+            </div>
+
+            <button type="submit" class="button">Save Application</button>
+            <a href="{% url 'application_list' %}" class="button">Cancel</a>
+        </form>
+    </div>
+{% endblock %}

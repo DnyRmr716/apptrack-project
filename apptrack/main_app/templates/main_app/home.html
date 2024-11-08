@@ -1,0 +1,20 @@
+{% extends "main_app/base.html" %}
+
+{% block title %}Welcome to AppTrack{% endblock %}
+
+{% block content %}
+    <div class="box home-content">
+        <h1>Welcome to AppTrack</h1>
+        <p>The #1 Job Application Tracker for the Average Job Hunter!</p>
+        <p>Please Sign Up or Log In to start tracking your Applications!</p>
+
+        {% if user.is_authenticated %}
+            <p>Welcome back, {{ user.username }}!</p>
+            <a href="{% url 'logout' %}" class="button">Log Out</a>
+            <a href="{% url 'application_list' %}" class="button">View Applications</a>
+        {% else %}
+            <a href="{% url 'login' %}?next=/applications/" class="button">Log In</a> or 
+            <a href="{% url 'sign_up' %}" class="button">Sign Up</a>
+        {% endif %}
+    </div>
+{% endblock %}

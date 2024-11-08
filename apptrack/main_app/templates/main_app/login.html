@@ -1,0 +1,16 @@
+{% extends "main_app/base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <div class="box login">
+        <h1>Login to AppTrack</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="next" value="{{ next|default:'/applications/' }}">
+            <button type="submit" class="button">Login</button>
+        </form>
+        <p>Don't have an account? <a href="{% url 'sign_up' %}" class="button">Sign up here</a>.</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "main_app/base.html" %}
+
+{% block title %}About AppTrack{% endblock %}
+
+{% block content %}
+    <div class="box about">
+        <h1>About AppTrack</h1>
+        <p>Welcome to AppTrack – your personal job application management tool!</p>
+
+        <h2>Our Mission</h2>
+        <p> Searching for a new job can be a challenging and time-consuming journey. With multiple applications to track, deadlines to remember, and statuses to update, 
+            it’s easy to lose sight of your progress. That’s where AppTrack comes in!
+            AppTrack was designed to simplify your job search by providing an organized and user-friendly space to manage every aspect of your applications. 
+            Here, you can keep track of each position you apply to, monitor your application status, and store important details for every opportunity. With just a few clicks, 
+            you can update, edit, or delete entries, making it easy to keep your information current and focused.</p>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Add New Applications: Quickly add new job applications with details such as job title, company, date applied, and current status.</li>
+            <li>Track Progress: Update statuses as you progress through the application stages – from “Applied” to “Interviewing” to “Accepted” or “Rejected”.</li>
+            <li>Take Notes: Add custom notes for each job, such as key interview takeaways, follow-up actions, or additional insights.</li>
+            <li>Secure Access: Sign up for an account to securely access your application data, and rest assured your information remains private.</li>
+        </ul>
+
+        <h2>Why AppTrack?</h2>
+        <p>
+            AppTrack was built with job seekers in mind, whether you're applying for your first job or advancing in your career. We believe that having a streamlined, 
+            all-in-one platform can help take the stress out of managing multiple applications and help you stay organized throughout your job search.
+            With AppTrack, your job application data is always at your fingertips, accessible from anywhere, and stored securely. 
+            We’re here to support you every step of the way as you move closer to your next career opportunity.
+        </p>
+    </div>
+    <a href="{% url 'application_list' %}"  class="button">Back to Applications</a>
+{% endblock %}

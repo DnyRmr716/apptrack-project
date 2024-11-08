@@ -1,0 +1,18 @@
+{% extends "main_app/base.html" %}
+
+{% block title %}Application Details{% endblock %}
+
+{% block content %}
+    <div class="box details">
+        <h1>{{ application.application_title }}</h1>
+        <p><strong>Job Title:</strong> {{ application.job_title }}</p>
+        <p><strong>Company:</strong> {{ application.company }}</p>
+        <p><strong>Job Summary:</strong> {{ application.job_summary }}</p>
+        <p><strong>Date Applied:</strong> {{ application.date_applied }}</p>
+        <p><strong>Status:</strong> {{ application.status }}</p>
+        <p><strong>Notes:</strong> {{ application.notes }}</p>
+
+        <a href="{% url 'application_update' application.pk %}" class="button">Edit</a>
+        <a href="{% url 'application_list' %}" class="button">Back to Applications</a>
+    </div>
+{% endblock %}

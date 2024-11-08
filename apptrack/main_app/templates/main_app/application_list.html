@@ -1,0 +1,26 @@
+{% extends "main_app/base.html" %}
+{% load static %}
+
+{% block title %}Your Job Applications{% endblock %}
+
+{% block content %}
+    <div class="header-container">
+        <h1>Your Job Applications</h1>
+        <a href="{% url 'application_create' %}" class="button">Add New Application</a>
+    </div>
+    <div class="application-list">
+        {% for application in applications %}
+            <div class="application-box">
+                <a href="{% url 'application_detail' application.pk %}">
+                    <strong>{{ application.application_title }}</strong>
+                </a>
+                <p>{{ application.job_title }} at {{ application.company }}</p>
+                <p>Applied on: {{ application.date_applied }}</p>
+                <p>Status: {{ application.status }}</p>
+                <a href="{% url 'application_update' application.pk %}" class="button">Edit</a>
+            </div>
+        {% empty %}
+            <p>No applications found.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

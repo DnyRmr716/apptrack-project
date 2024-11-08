@@ -1,0 +1,294 @@
+/* General Page Styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #1F4B59;
+    color: #FFF2D8;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+h1, h2, p {
+    color: #FFF2D8;
+    text-decoration: none;
+}
+
+/* Main Container and Layout Adjustments */
+main {
+    padding-top: 60px; 
+}
+
+.home-content,
+.about h1, h2, p {
+    text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #FFF2D8;
+    color: #1F4B59;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #1F4B59;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #3F849D;
+    color: #FFF2D8;
+}
+
+/* Box Styling */
+.box {
+    background-color: #FFF2D8;
+    color: #1F4B59;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box.centered-box {
+    text-align: center;
+    color: #1F4B59;
+}
+
+/* Centered container specifically for the login box */
+.box.login {
+    max-width: 400px;
+    background-color: #FFF2D8;
+    color: #1F4B59;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box.login h1 {
+    color: #1F4B59;
+    margin-bottom: 20px;
+}
+
+/* Center align the form elements */
+.box.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for input fields in login form */
+.box.login input[type="text"],
+.box.login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3F849D;
+    border-radius: 5px;
+    background-color: #FFF2D8;
+    color: #1F4B59;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.box.login input[type="text"]:focus,
+.box.login input[type="password"]:focus {
+    border-color: #336f84;
+    outline: none;
+    color: #1F4B59;
+}
+
+/* Styling for labels in login form */
+.box.login label {
+    color: #1F4B59;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+/* Login button styling */
+.box.login .button {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #3F849D;
+    color: #FFF2D8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.box.login .button:hover {
+    background-color: #336f84;
+}
+
+.box.about {
+    background-color: #FFF2D8; /* Background color for the box */
+    color: #1F4B59; /* Text color */
+    padding: 20px 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left by default */
+}
+
+.box.about h1, .box.about h2, .box.about p, .box.about ul {
+    color: #1F4B59; /* Ensure all headings, paragraphs, and lists have the same text color */
+}
+
+.box.about ul {
+    padding-left: 20px; /* Add padding to the list for better readability */
+}
+
+.box.about ul li {
+    margin-bottom: 10px;
+}
+
+/* Styling specifically for the application details box */
+.box.details {
+    background-color: #FFF2D8; /* Light background for readability */
+    color: #1F4B59; /* Dark text color for contrast */
+    padding: 20px 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.box.details h1, .box.details h2, .box.details p, .box.details ul, .box.details strong {
+    color: #1F4B59; /* Ensure all headings, paragraphs, lists, and strong text have the same text color */
+}
+
+.box.details ul {
+    padding-left: 20px; /* Add padding to the list for readability */
+}
+
+.box.details ul li {
+    margin-bottom: 10px;
+}
+
+
+/* Header Container */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-container h1 {
+    margin-bottom: 10px;
+}
+
+/* Application List */
+.application-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.application-box {
+    background-color: #FFF2D8;
+    color: #1F4B59 !important;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.application-box p {
+    color: #1F4B59;
+    font-weight: bold;
+}
+
+.application-box a:hover {
+    color: #3F849D;
+}
+
+/* Button Styling */
+button, .button,
+button.button, a.button {
+    background-color: #3F849D;
+    color: #FFF2D8;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+button:hover, .button:hover,
+button.button:hover, a.button:hover {
+    background-color: #336f84;
+    color: #FFF2D8 !important;
+}
+
+/* Form Container and Fields */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFF2D8;
+    color: #1F4B59;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #3F849D;
+    border-radius: 5px;
+    background-color: #FFF2D8;
+    color: #1F4B59;
+    font-size: 16px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #336f84;
+    outline: none;
+}
+
+/* Detail Item */
+.detail-item {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.detail-item p {
+    margin: 5px 0;
+}
