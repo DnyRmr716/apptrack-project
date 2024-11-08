@@ -1,1 +1,1 @@
-web: gunicorn apptrack.wsgi
+web: gunicorn apptrack.wsgi.application
