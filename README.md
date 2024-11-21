@@ -4,6 +4,9 @@
 
 AppTrack is a personal job application management tool designed to help job seekers organize, track, and manage their job applications with ease. This web application enables users to record important details about each job application, such as job title, company, date applied, status, and additional notes. Built with Django, AppTrack provides a user-friendly interface and secure access to manage your job hunt in one place.
 
+## Track Your Applications Now!
+- Start **[AppTrack](https://apptrack-4a604603e49d.herokuapp.com/)** Now!
+
 ## Features
 
 - **Add New Applications**: Users can add new job applications by providing details such as job title, company, application date, status, and notes.
@@ -18,4 +21,5 @@ AppTrack is a personal job application management tool designed to help job seek
 - **Python**: Backend logic and server-side processing.
 - **Django**: Web framework for the backend, including models, views, and templates.
 - **HTML/CSS**: Frontend structure and styling.
-- **SQlite**: Database used for storing application data.
+- **PostgreSQL**: Database used for storing application data.
+- **Heroku**: Cloud platform used to deploy the app.
