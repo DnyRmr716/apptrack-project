@@ -12,7 +12,13 @@
         <p><strong>Status:</strong> {{ application.status }}</p>
         <p><strong>Notes:</strong> {{ application.notes }}</p>
 
-        <a href="{% url 'application_update' application.pk %}" class="button">Edit</a>
-        <a href="{% url 'application_list' %}" class="button">Back to Applications</a>
+        <div class="button-container">
+            <form action="{% url 'application_delete' application.pk %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="button delete" onclick="return confirm('Are you sure you want to delete this application?');">Delete</button>
+            </form>
+            <a href="{% url 'application_update' application.pk %}" class="button">Edit</a>
+            <a href="{% url 'application_list' %}" class="button">Back to Applications</a>
+        </div>
     </div>
 {% endblock %}

@@ -60,10 +60,10 @@ def application_update(request, pk):
     return render(request, 'main_app/application_form.html', {'form': form})
 
 @login_required
-
 def application_delete(request, pk):
-    application = get_object_or_404(JobApplication, pk=pk)
+    application = get_object_or_404(JobApplication, pk=pk, user=request.user)
     if request.method == 'POST':
         application.delete()
         return redirect('application_list')
-    return render(request, 'main_app/application_confirm_delete.html', {'application': application})
+    else:
+        return redirect('application_detail', pk=pk)
